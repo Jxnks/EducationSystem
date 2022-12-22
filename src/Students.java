@@ -1,10 +1,17 @@
 public class Students {
     final String name;
-    final String age;
+    final int age;
+    final <HashMap> (String name, int age);
 
-
-    public Students(String name, String age) {
+    // constructor
+    public Students(String name, int age) {
         this.name = name;
         this.age = age;
     }
+
+    public int returnAge() {
+
+        return age;
+    }
+
 }
