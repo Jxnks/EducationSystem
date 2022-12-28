@@ -15,22 +15,52 @@ public class UserInterface {
     }
 
     public void start() {
-            welcomeScreen();
-            studentName();
-            studentAge();
-            subjectPicker();
+        welcomeScreen();
+        studentName();
+        studentAge();
+        subjectPicker();
 
     }
+
+//work
+    public void staffLogCredentials(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Username:");
+        String input = scanner.nextLine();
+        System.out.println("Password");
+        String input2 = scanner.nextLine();
+
+    }
+
+    //work
+    public void staffIntranet(){
+        staffLogCredentials();
+        System.out.println("");
+    }
+
 
 
     public void welcomeScreen() {
         System.out.println("Hello and welcome to Dordon Community College.\n" +
-                "You can learn multiple trades or join our amazing programming bootcamp.");
+                "You can learn multiple trades or join our amazing programming bootcamp." +
+                "Press 1 to apply for enrollment." +
+                "Press 2 for the staff intranet"
+        );
+        while (true) {
+            Scanner scanner = new Scanner(System.in);
+            int input = Integer.parseInt(scanner.nextLine());
+            if (input == 1) {
+                break;
+            } else if (input == 2) {
+                staffIntranet();
+            }
+        }
+
     }
 
 
     public void studentAge() {
-        while(true) {
+        while (true) {
             System.out.println("Enter date of birth in YYYY-MM-DD format: ");
             Scanner scanner = new Scanner(System.in);
             String input = scanner.nextLine();
@@ -64,21 +94,51 @@ public class UserInterface {
             int input = Integer.parseInt(scanner.nextLine());
 
             if (input == 1) {
-                System.out.println("You have chosen Electrical Installation. Is this correct? y/n?");
-                Calculators.yesOrNo();
+                Calculators.youHaveChosen("Electrical Installation");
+                String input2 = scanner.nextLine();
+                if (input2.toLowerCase(Locale.ROOT).contains("y")) {
+                    break;
+                } else if (input2.toLowerCase(Locale.ROOT).contains("n")) {
+                    System.out.println("There appears to be an error. Lets try again.");
+                }
             } else if (input == 2) {
-                System.out.println("You have chosen Carpentry. Is this correct? y/n?");
-                Calculators.yesOrNo();
+                Calculators.youHaveChosen("Carpentry.");
+                String input2 = scanner.nextLine();
+                if (input2.toLowerCase(Locale.ROOT).contains("y")) {
+                    break;
+                } else if (input2.toLowerCase(Locale.ROOT).contains("n")) {
+                        System.out.println("There appears to be an error. Lets try again.");
+                    }
             } else if (input == 3) {
-                System.out.println("You have chosen Plumbing. Is this correct? y/n?");
-                Calculators.yesOrNo();
+                Calculators.youHaveChosen("Plumbing.");
+                String input2 = scanner.nextLine();
+                if (input2.toLowerCase(Locale.ROOT).contains("y")) {
+                    break;
+                } else if (input2.toLowerCase(Locale.ROOT).contains("n")) {
+                    System.out.println("There appears to be an error. Lets try again.");
+                }
             } else if (input == 4) {
-                System.out.println("You have chosen Java programming bootcamp. Is this correct? y/n?");
-                Calculators.yesOrNo();
+                Calculators.youHaveChosen("Java programming bootcamp.");
+                String input2 = scanner.nextLine();
+                if (input2.toLowerCase(Locale.ROOT).contains("y")) {
+                    break;
+                } else if (input2.toLowerCase(Locale.ROOT).contains("n")) {
+                    System.out.println("There appears to be an error. Lets try again.");
+                }
             } else {
                 System.out.println("You have not chosen a valid option. Please try again.");
-            }
-        }
-    }
+                            }
 
-}
+                        }
+                    }
+
+
+
+                }
+
+
+
+
+
+
+

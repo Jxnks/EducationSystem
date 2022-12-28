@@ -27,6 +27,10 @@ public class Calculators {
         }
     }
 
+    public static void youHaveChosen(String chosen) {
+        System.out.println("you have chosen " + chosen + ". is this correct? y/n?");
+    }
+
 
     public static void yesOrNo(){
         while (true) {

@@ -6,6 +6,7 @@ public class Main {
     Students students = new Students();
 
     UserInterface ui = new UserInterface(scanner /* ,students*/);
-    ui.start();
+    //ui.start();
+        ui.subjectPicker();
 }
 }
