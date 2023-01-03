@@ -22,7 +22,7 @@ public class UserInterface {
 
     }
 
-//work
+//work to be done
     public void staffLogCredentials(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Username:");
@@ -32,7 +32,7 @@ public class UserInterface {
 
     }
 
-    //work
+    //work to be done
     public void staffIntranet(){
         staffLogCredentials();
         System.out.println("");

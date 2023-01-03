@@ -2,9 +2,9 @@ public class Grades {
     private int mathsGrade;
     private int englishGrade;
 
-    public Grades(int mathsGrade, int englishGrade) {
-        this.mathsGrade = mathsGrade;
-        this.englishGrade = englishGrade;
+    public Grades() {
+        this.mathsGrade = 0;
+        this.englishGrade = 0;
     }
 
     public void setMathsGrade(int mathsGrade) {
@@ -16,6 +16,7 @@ public class Grades {
     }
 
     public int getMathsGrade() {
+
         return mathsGrade;
     }
 
