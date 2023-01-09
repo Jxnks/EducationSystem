@@ -7,6 +7,11 @@ public class Grades {
         this.englishGrade = 0;
     }
 
+    public void setGrades(int mathsGrade, int englishGrade){
+        this.mathsGrade = mathsGrade;
+        this.englishGrade = englishGrade;
+    }
+
     public void setMathsGrade(int mathsGrade) {
         this.mathsGrade = mathsGrade;
     }
@@ -16,11 +21,17 @@ public class Grades {
     }
 
     public int getMathsGrade() {
-
+        System.out.println("Maths grade: " + mathsGrade);
         return mathsGrade;
     }
 
     public int getEnglishGrade() {
+        System.out.println("English grade: " + englishGrade);
         return englishGrade;
+    }
+
+    public Grades getGrades() {
+        this.getMathsGrade();
+        this.getEnglishGrade();
     }
 }

@@ -2,11 +2,9 @@ import java.util.ArrayList;
 
 public class Students{
     private String name;
-    private Grades studentGrades;
+    private Grades grades;
     private int age;
     private ArrayList<String> studentList;
-    private int engGrade;
-
 
 
     // constructor
@@ -14,29 +12,78 @@ public class Students{
         this.name = name;
         this.age = age;
         this.studentList = new ArrayList<>();
-        this.engGrade = 0;
+        this.grades = new Grades();
     }
+
+    public Students() {
+        this.studentList = new ArrayList<>();
+        this.grades = new Grades();
+    }
+
+    public Students(String name) {
+        this.name = name;
+        this.studentList = new ArrayList<>();
+        this.grades = new Grades();
+    }
+
+
+    public void getDetails() {
+        getName();
+        getAge();
+        getGrades();
+        System.out.println("");
+    }
+
+    public String getName() {
+        System.out.println(this.name);
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+
+    }
+
+    public int getAge() {
+        System.out.println(this.age);
+        return this.age;
+    }
+
+    public void getGrades() {
+        this.grades.getMathsGrade();
+        this.grades.getEnglishGrade();
+    }
+
 
     public void setEnglishGrade(int engGrade) {
-        this.studentGrades.setEnglishGrade(engGrade);
+        this.grades.setEnglishGrade(engGrade);
     }
 
-    public void setEnglishGrade2(int engGrade) {
-      //  this.studentGrades.setEnglishGrade(engGrade);
-        this.engGrade = engGrade;
-    }
 
     public void setMathsGrade(int mathsGrade) {
-        this.studentGrades.setMathsGrade(mathsGrade);
+        this.grades.setMathsGrade(mathsGrade);
     }
 
-    public int getMathsGrade() {
-        return this.getMathsGrade();
+
+    public void getMathsGrade() {
+        this.grades.getMathsGrade();
     }
 
-    public int getEngGrade() {
-        System.out.println(this.engGrade);
-        return this.engGrade;
+    public void getEnglishGrade() {
+        this.grades.getEnglishGrade();
+    }
 
+    public void setGrades(int mathsGrade, int englishGrade) {
+        this.grades.setGrades(mathsGrade, englishGrade);
+    }
+
+    @Override
+    public String toString() {
+        Grades grades = getGrades();
+        return this.name + ", age: " + this.age + " years, " + this.getGrades();
     }
 }

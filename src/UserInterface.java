@@ -1,3 +1,5 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Scanner;
 import java.time.LocalDate;
@@ -16,7 +18,7 @@ public class UserInterface {
 
     public void start() {
         welcomeScreen();
-        studentName();
+        //enrollmentSystem();
         studentAge();
         subjectPicker();
 
@@ -31,12 +33,99 @@ public class UserInterface {
         String input2 = scanner.nextLine();
 
     }
+/*
+    public void enrollmentSystem() {
+        // student name
+        while (true) {
+            ArrayList<Students> students = new ArrayList<>();
+            Grades Grades = new Grades();
+            Students s1 = new Students();
+            students.add(s1);
+
+            //students.add(new Students(fullname, age));
+
+
+
+
+            System.out.println("Please enter your full name (including any middle names):");
+            String fullName = scanner.nextLine();
+            s1.setName(fullName);
+
+            // student age
+            {
+                System.out.println("Enter date of birth in YYYY-MM-DD format: ");
+                Scanner scanner = new Scanner(System.in);
+                String input = scanner.nextLine();
+                LocalDate dob = LocalDate.parse(input);
+                System.out.println("You are " + Calculators.calculateAge(dob) + " years old. Is this correct?\ny/n?");
+                //Calculators.yesOrNo();
+                String input2 = scanner.nextLine();
+                if (input2.toLowerCase(Locale.ROOT).contains("y")) {
+                    if (Calculators.calculateAge(dob) < 18) {
+                        System.out.println("Sorry, you are currently too young to enter this college. Please try again when you are 18.");
+                    }
+                    break; // could use this to calculate required age ^^
+                } else if (input2.toLowerCase(Locale.ROOT).contains("n")) {
+                    System.out.println("There appears to be an error. Lets try again.");
+                }
+
+
+                // subject picker
+
+                System.out.println("What subject would you like to study?\nPress 1 for Electrical Installation.\nPress 2 for Carpentry.\n" +
+                        "Press 3 for Plumbing.\n" + "Press 4 for Java programming bootcamp.");
+                int input = Integer.parseInt(scanner.nextLine());
+
+                if (input == 1) {
+                    Calculators.youHaveChosen("Electrical Installation");
+                    String input2 = scanner.nextLine();
+                    if (input2.toLowerCase(Locale.ROOT).contains("y")) {
+                        break;
+                    } else if (input2.toLowerCase(Locale.ROOT).contains("n")) {
+                        System.out.println("There appears to be an error. Lets try again.");
+                    }
+                } else if (input == 2) {
+                    Calculators.youHaveChosen("Carpentry.");
+                    String input2 = scanner.nextLine();
+                    if (input2.toLowerCase(Locale.ROOT).contains("y")) {
+                        break;
+                    } else if (input2.toLowerCase(Locale.ROOT).contains("n")) {
+                        System.out.println("There appears to be an error. Lets try again.");
+                    }
+                } else if (input == 3) {
+                    Calculators.youHaveChosen("Plumbing.");
+                    String input2 = scanner.nextLine();
+                    if (input2.toLowerCase(Locale.ROOT).contains("y")) {
+                        break;
+                    } else if (input2.toLowerCase(Locale.ROOT).contains("n")) {
+                        System.out.println("There appears to be an error. Lets try again.");
+                    }
+                } else if (input == 4) {
+                    Calculators.youHaveChosen("Java programming bootcamp.");
+                    String input2 = scanner.nextLine();
+                    if (input2.toLowerCase(Locale.ROOT).contains("y")) {
+                        break;
+                    } else if (input2.toLowerCase(Locale.ROOT).contains("n")) {
+                        System.out.println("There appears to be an error. Lets try again.");
+                    }
+                } else {
+                    System.out.println("You have not chosen a valid option. Please try again.");
+                }
+
+            }
+
+        }
+    }
+
+*/
 
     //work to be done
-    public void staffIntranet(){
+    public void staffIntranet() {
         staffLogCredentials();
         System.out.println("");
     }
+
+
 
 
 
