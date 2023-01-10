@@ -1,0 +1,22 @@
+Basic Education Enrollment System
+
+I built this to learn more about OOP and to advance my skills so one day I will be a junior dev.
+It is not complete, but for one of my first bigger projects it will do for now :).
+
+What I implemented and learnt
+- User interface where students choose one of four subjects with basic details
+- Working with superclasses and learning more about inheritance
+- Adding objects to a list
+- I had issues with Grades class and Students as they both contain getters and setters for grades
+- Also I had the UI broken up better but now the enrollment process is in one big chunk
+- Learnt about using Github too as this was written on two different machines so I am getting used to source control
+
+Functionality that could be added
+- An algorithm which calculates the best Maths grades and puts them in top set
+- Level selector based off grades
+- Staff intranet with a database for username and password.
+- Admin side of the program so you can see who is enrolled
+- When the date gets to September 1st a timetable is sent to the students email
+- Pay system for teachers
+- Attendance etc
+- Alot of error handling would improve the program too

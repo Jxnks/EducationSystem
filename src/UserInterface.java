@@ -37,13 +37,13 @@ public class UserInterface {
     public void enrollmentSystem() {
 
         int maxStudentsInCollege = 96; // 24 per class
-        for(int i = 0; i < 3; i++) {
+        for(int i = 0; i < maxStudentsInCollege; i++) {
 
-            //System.out.println("To exit this program type 'exit'");
-            //String command = scanner.nextLine();
-            //if (command.contains("exit")) {
-              //  break;
-            //}
+            System.out.println("To exit this program type 'exit'");
+            String command = scanner.nextLine();
+            if (command.contains("exit")) {
+                break;
+            }
 
             ArrayList<Students> studentList = new ArrayList<>();
             ArrayList<Students> electricalStudents = new ArrayList<>();
