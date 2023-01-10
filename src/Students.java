@@ -7,6 +7,7 @@ public class Students{
     private ArrayList<String> studentList;
 
 
+
     // constructor
     public Students(String name, int age) {
         this.name = name;
@@ -58,6 +59,11 @@ public class Students{
         this.grades.getEnglishGrade();
     }
 
+    public void add(Students student){
+        ArrayList<Students> students = new ArrayList<>();
+        students.add(student);
+    }
+
 
     public void setEnglishGrade(int engGrade) {
         this.grades.setEnglishGrade(engGrade);
@@ -83,7 +89,6 @@ public class Students{
 
     @Override
     public String toString() {
-        Grades grades = getGrades();
-        return this.name + ", age: " + this.age + " years, " + this.getGrades();
+        return "Name: " + this.name + ", age: " + this.age + " years ";
     }
 }

@@ -5,6 +5,7 @@ public class ElectricalClasses extends Classes {
     private ArrayList<Students> classList;
 
     public ElectricalClasses() {
+
         this.classList = new ArrayList<>();
     }
     @Override
@@ -14,6 +15,7 @@ public class ElectricalClasses extends Classes {
     }
 
     public void add(Students student) {
+
         this.classList.add(student);
     }
 }

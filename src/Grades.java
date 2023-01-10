@@ -30,7 +30,7 @@ public class Grades {
         return englishGrade;
     }
 
-    public Grades getGrades() {
+    public void getGrades() {
         this.getMathsGrade();
         this.getEnglishGrade();
     }
